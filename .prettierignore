@@ -1,11 +1,11 @@
 # 忽略代码自动生成的文件
 docs/src/
-docs/coverage/
+docs/vuepress/
 docs/common/changelog.md
 docs/_sidebar.md
 docs/api.md
-docs/.vuepress/config.js
 src/index.ts
+scripts/jsdoc2md/templates
 
 .DS_Store
 .cache
