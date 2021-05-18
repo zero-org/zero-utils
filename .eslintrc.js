@@ -40,16 +40,16 @@ module.exports = {
             'error',
             { allowAllPropertiesOnSameLine: false },
         ],
-        'array-element-newline': [
-            'error',
-            {
-                // multiline: true,
-                // minItems: 2,
-                // 等于以上设置
-                ArrayExpression: 'consistent',
-                ArrayPattern: { minItems: 2 },
-            },
-        ],
+        // 'array-element-newline': [
+        //     'error',
+        //     {
+        //         // multiline: true,
+        //         // minItems: 2,
+        //         // 等于以上设置
+        //         ArrayExpression: 'consistent',
+        //         ArrayPattern: { minItems: 2 },
+        //     },
+        // ],
         'object-curly-newline': [
             'error',
             {
