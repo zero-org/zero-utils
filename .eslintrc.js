@@ -23,10 +23,8 @@ module.exports = {
         sourceType: 'module',
     },
     rules: {
-        indent: ['error',
-            4],
-        semi: ['error',
-            'never'],
+        indent: ['error', 4],
+        semi: ['error', 'never'],
         'no-restricted-syntax': 0,
         'max-len': 0,
         'import/no-extraneous-dependencies': 0,
@@ -45,8 +43,11 @@ module.exports = {
         'array-element-newline': [
             'error',
             {
-                multiline: true,
-                minItems: 2,
+                // multiline: true,
+                // minItems: 2,
+                // 等于以上设置
+                ArrayExpression: 'consistent',
+                ArrayPattern: { minItems: 2 },
             },
         ],
         'object-curly-newline': [
@@ -73,8 +74,7 @@ module.exports = {
                 ignoreReadBeforeAssign: false,
             },
         ],
-        'no-unused-expressions': ['error',
-            { allowShortCircuit: true }],
+        'no-unused-expressions': ['error', { allowShortCircuit: true }],
         'no-unused-vars': [
             'error',
             { vars: 'all',
