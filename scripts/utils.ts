@@ -4,7 +4,9 @@ let isFirstFile = true
 export function getFileSizeInfo(
     options,
     bundle,
-    { fileName, minSize, gzipSize, bundleSize },
+    {
+        fileName, minSize, gzipSize, bundleSize,
+    },
 ) {
     let output = ''
     if (isFirstFile) {

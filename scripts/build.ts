@@ -19,7 +19,9 @@ class Build {
     }
 
     checkEntry() {
-        const { inputs, lib } = this.state
+        const {
+            inputs, lib,
+        } = this.state
         if (inputs.length === 0) {
             const err = new Error(
                 'No files can be built, expect more than 1, but got 0',
@@ -68,7 +70,9 @@ class Build {
     async build(config) {
         const { output } = config
         const { format } = output
-        const { umdInputFile, umdInputScript, desc } = this.state
+        const {
+            umdInputFile, umdInputScript, desc,
+        } = this.state
         if (['umd'].includes(format)) {
             fs.writeFileSync(umdInputFile, desc + umdInputScript)
         }
@@ -79,7 +83,9 @@ class Build {
     async render() {
         this.checkEntry()
 
-        const { esOutputFile, esInputScript, desc } = this.state
+        const {
+            esOutputFile, esInputScript, desc,
+        } = this.state
         await Promise.all(
             rollupConfig.map(async (config) => {
                 await this.build(config)

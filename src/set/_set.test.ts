@@ -14,12 +14,22 @@ const testCase = [
     [
         'editVal',
         2,
-        { editVal: 2, editArrVal: [0], setNestVal: {}, setArrVal: [] },
+        {
+            editVal: 2,
+            editArrVal: [0],
+            setNestVal: {},
+            setArrVal: [],
+        },
     ],
     [
         'editArrVal[0]',
         2,
-        { editVal: 2, editArrVal: [2], setNestVal: {}, setArrVal: [] },
+        {
+            editVal: 2,
+            editArrVal: [2],
+            setNestVal: {},
+            setArrVal: [],
+        },
     ],
     [
         'setNestVal.setNestVal.setNestVal',

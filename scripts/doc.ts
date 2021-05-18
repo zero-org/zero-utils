@@ -66,7 +66,9 @@ class Docs {
     }
 
     setMD() {
-        const { tsFiles, docDir } = this.state
+        const {
+            tsFiles, docDir,
+        } = this.state
         console.log('build tsFiles :>> ', tsFiles)
 
         if (tsFiles.length === 0) return
