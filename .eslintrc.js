@@ -23,8 +23,10 @@ module.exports = {
         sourceType: 'module',
     },
     rules: {
-        indent: ['error', 4],
-        semi: ['error', 'never'],
+        indent: ['error',
+            4],
+        semi: ['error',
+            'never'],
         'no-restricted-syntax': 0,
         'max-len': 0,
         'import/no-extraneous-dependencies': 0,
@@ -36,6 +38,17 @@ module.exports = {
         'no-eval': 0,
         'consistent-return': 0,
         'import/extensions': 0,
+        'object-property-newline': [
+            'error',
+            { allowAllPropertiesOnSameLine: false },
+        ],
+        'array-element-newline': [
+            'error',
+            {
+                multiline: true,
+                minItems: 2,
+            },
+        ],
         'object-curly-newline': [
             'error',
             {
@@ -44,6 +57,10 @@ module.exports = {
                     minProperties: 2,
                 },
                 ExportDeclaration: {
+                    multiline: true,
+                    minProperties: 2,
+                },
+                ObjectPattern: {
                     multiline: true,
                     minProperties: 2,
                 },
@@ -56,10 +73,13 @@ module.exports = {
                 ignoreReadBeforeAssign: false,
             },
         ],
-        'no-unused-expressions': ['error', { allowShortCircuit: true }],
+        'no-unused-expressions': ['error',
+            { allowShortCircuit: true }],
         'no-unused-vars': [
             'error',
-            { vars: 'all', args: 'after-used', ignoreRestSiblings: false },
+            { vars: 'all',
+                args: 'after-used',
+                ignoreRestSiblings: false },
         ],
     },
 }
