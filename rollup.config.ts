@@ -11,8 +11,7 @@ import { getFileSizeInfo } from './scripts/utils'
 
 const name = 'wontUtils'
 
-const extensions = ['.ts',
-    '.js']
+const extensions = ['.ts', '.js']
 const singleFileInput = {}
 
 glob.sync('src/!(_)*/!(_)*.ts').forEach((files) => {
@@ -32,9 +31,7 @@ const paths = {
 // }
 
 function genPlugins(opt?) {
-    const {
-        useTerser = false, genDts = false,
-    } = opt || {}
+    const { useTerser = false, genDts = false } = opt || {}
     const plugins = [
         json(),
         resolve({

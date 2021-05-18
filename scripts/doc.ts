@@ -37,8 +37,7 @@ class Docs {
         const { mdFiles } = this.state
         console.log('generate mdFiles :>> ', mdFiles)
         const mdList: Array<string | Sidebar> = mdFiles.map((mdFile) => {
-            let [, dir,
-                name] = mdFile.split('/')
+            let [, dir, name] = mdFile.split('/')
             name = name.split('.')[0]
             if (name === 'CHANGELOG') {
                 return {
@@ -67,9 +66,7 @@ class Docs {
     }
 
     setMD() {
-        const {
-            tsFiles, docDir,
-        } = this.state
+        const { tsFiles, docDir } = this.state
         console.log('build tsFiles :>> ', tsFiles)
 
         if (tsFiles.length === 0) return
